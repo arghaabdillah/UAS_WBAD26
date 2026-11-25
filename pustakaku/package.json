@@ -1,0 +1,28 @@
+{
+  "name": "pustakaku",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "prisma migrate deploy && node prisma/seed.js && next dev",
+    "build": "prisma generate && next build",
+    "start": "prisma migrate deploy && node prisma/seed.js && next start",
+    "postinstall": "prisma generate",
+    "db:seed": "node prisma/seed.js",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.0.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prisma": "^6.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5"
+  }
+}
